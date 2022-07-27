@@ -28,7 +28,7 @@ class ApplicationController extends Controller
     {
         return view('application.create');
     }
-
+    
     /**
      * Store a newly created resource in storage.
      *

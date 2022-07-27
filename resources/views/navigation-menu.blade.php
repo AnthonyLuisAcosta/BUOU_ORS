@@ -217,10 +217,10 @@
 </Head>
 
 
-<div class="hidden h-auto bg-white sm:flex w-64">
+<div class="hidden h-screen sm:flex">
     <aside class="w-64" aria-label="Sidebar">
 
-        <div class="overflow-y-auto py-4 px-3 bg-gray-50 rounded ">
+    <div class="overflow-y-auto py-4 px-3 rounded ">
             <ul class="space-y-2">
                 <li>
                     <a href="/dashboard" class="flex items-center p-2 text-base font-normal text-gray-900 rounded-lg dark:group-hover:text-black hover:bg-gray-100 dark:hover:bg-blue-100">
