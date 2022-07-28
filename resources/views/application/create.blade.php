@@ -13,7 +13,6 @@
 	@endforeach
 	</ul>
 </div>
-
 @endif
 <div class="main-container">
 
@@ -22,8 +21,7 @@
 
 
         <div class="card">
-          <form method="post" action="{{ route('application.store'
-          ) }}" enctype="multipart/form-data">
+          <form method="post" action="{{ route('application.store') }}" enctype="multipart/form-data">
             @csrf
               <div class="container" style="">
       
@@ -155,18 +153,7 @@
           </form>
           <br>
         </div>
-
-        <div class="card1" style="width:300px; height:600px; background-color:white; margin: 50px; padding: 100px;">
-          
-
-        </div>
-        
-
-      </div>
-    
-      
-
-    
+      </div> 
 </div>
 <style>
 .card{
