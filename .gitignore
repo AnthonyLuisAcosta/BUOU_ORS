@@ -7,3 +7,16 @@ npm-debug.log
 yarn-error.log
 /.idea
 /.vscode
+node_modules/.vite/deps/_metadata.json
+node_modules/.vite/deps/_metadata.json
+node_modules/.vite/deps/alpinejs.js
+node_modules/.vite/deps/alpinejs.js.map
+node_modules/.vite/deps/axios.js
+node_modules/.vite/deps/axios.js.map
+node_modules/.vite/deps/chunk-RSJERJUL.js.map
+node_modules/.vite/deps/lodash.js
+node_modules/.vite/deps/vite_dist_client_client__mjs.js
+node_modules/.vite/deps/vite_dist_client_client__mjs.js.map
+node_modules/.vite/deps/lodash.js.map
+node_modules/.vite/deps/chunk-RSJERJUL.js
+public/hot
