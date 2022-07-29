@@ -16,13 +16,7 @@ class UpdateProfileInformationForm extends Component
      *
      * @var array
      */
-    public $state = [
-        'first_name' => '',
-        'middle_name' => '',
-        'last_name' => '',
-        'phone' => '',
-        'address' => '',
-    ];
+    public $state = [];
 
     /**
      * The new avatar for the user.
