@@ -1,7 +1,8 @@
 <?php
 use App\Http\Controllers;
-use App\Http\Controllers\ApplicationController;
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\ProgramsController;
+use App\Http\Controllers\ApplicationController;
 
 /*
 |--------------------------------------------------------------------------
@@ -29,3 +30,5 @@ Route::middleware([
 });
 
 Route::resource('/application', ApplicationController::class);
+
+Route::resource('/programs', ProgramsController::class);
