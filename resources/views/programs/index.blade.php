@@ -131,12 +131,6 @@
 					</ul>
 				</nav>
 			</div>
-
-							
-				
-
-	
-
         </div>
     </div>
 	<script>
