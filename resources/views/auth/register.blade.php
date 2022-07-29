@@ -8,21 +8,28 @@
 
         <form method="POST" action="{{ route('register') }}">
             @csrf
-
+            <!--MODIFIED FIELDS-->
             <div>
                 <x-jet-label for="name" value="{{ __('First Name') }}" />
                 <x-jet-input id="name" class="block mt-1 w-full" type="text" name="first_name" :value="old('name')" required autofocus autocomplete="name" />
             </div>
 
-            <div class="mt-4">
+            <div>
                 <x-jet-label for="name" value="{{ __('Middle Name') }}" />
                 <x-jet-input id="name" class="block mt-1 w-full" type="text" name="middle_name" :value="old('name')" required autofocus autocomplete="name" />
             </div>
 
-            <div class="mt-4">
+            <div>
                 <x-jet-label for="name" value="{{ __('Last Name') }}" />
                 <x-jet-input id="name" class="block mt-1 w-full" type="text" name="last_name" :value="old('name')" required autofocus autocomplete="name" />
-            </div class="mt-4">
+            </div>
+
+            <!--ASSIGN DEFAULT ROLE ON REGISTER (4 is role_id for Applicant)-->
+            <div hidden>
+                <x-jet-label for="role" value="{{ __('Default Role') }}" />
+                <x-jet-input id="role" class="block mt-1 w-full" type="number" name="role_id" value="4" />
+            </div>
+            <!--END-->
 
             <div class="mt-4">
                 <x-jet-label for="email" value="{{ __('Email') }}" />
