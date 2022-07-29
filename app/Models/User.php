@@ -61,4 +61,10 @@ class User extends Authenticatable
     protected $appends = [
         'profile_photo_url',
     ];
+
+    //role and user relationship 
+    public function roles()
+    {
+        $this->belongsTo('App\Role');
+    }
 }
