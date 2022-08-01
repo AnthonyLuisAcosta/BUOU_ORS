@@ -1,7 +1,8 @@
 <?php
 
-namespace App\Http\Controllers;
+namespace App\Http\Controllers\Admin;
 
+use App\Http\Controllers\Controller;
 use App\Models\Programs;
 use Illuminate\Http\Request;
 use App\Http\Requests\StoreProgramsRequest;
@@ -15,13 +16,13 @@ class ProgramsController extends Controller
     {
         $programs = Programs::all();
 
-        return view('programs.index')->with('programs', $programs);
+        return view('admin.programs.index')->with('programs', $programs);
     }
 
     /*Show the form for creating a new resource */
     public function create()
     {
-        return view('programs.create');
+        return view('admin.programs.create');
     }
 
     /* Store a newly created resource in storage*/
@@ -29,21 +30,21 @@ class ProgramsController extends Controller
     {
         $input = $request->all();
         Programs::create($input);
-        return redirect('programs');  
+        return redirect()->route('admin.programs.index'); 
     }
 
     /* Display the specified resource*/
     public function show($id)
     {
         $programs = Programs::find($id);
-        return view('programs.show')->with('programs', $programs);
+        return view('admin.programs.show')->with('programs', $programs);
     }
 
     /*Show the form for editing the specified resource.*/
     public function edit($id)
     {
         $programs = Programs::find($id);
-        return view('programs.edit')->with('programs', $programs);
+        return view('admin.programs.edit')->with('programs', $programs);
     }
 
     /* Update the specified resource in storage*/
@@ -52,14 +53,14 @@ class ProgramsController extends Controller
         $programs = Programs::find($id);
         $input = $request->all();
         $programs->update($input);
-        return redirect('programs');
+        return redirect()->route('admin.programs.index');
     }
 
     /*Remove the specified resource from storage.*/
     public function destroy($id)
     {
         Programs::destroy($id);
-        return redirect('programs');  
+        return redirect()->route('admin.programs.index');  
     }
 
     public function search(Request $request)
