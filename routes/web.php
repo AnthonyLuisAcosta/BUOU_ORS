@@ -2,8 +2,9 @@
 
 use App\Http\Controllers;
 use Illuminate\Support\Facades\Route;
-use SebastianBergmann\CodeCoverage\Report\Html\Dashboard;
+use App\Http\Controllers\Admin\ProgramsController;
 use App\Http\Controllers\Admin\ApplicationController;
+use SebastianBergmann\CodeCoverage\Report\Html\Dashboard;
 
 
 /*
@@ -26,6 +27,7 @@ Route::get('/', function () {
 Route::group(['as' => 'admin.', 'prefix' => 'admin', 'middleware' => ['auth', 'admin']], function () {
     Route::get('dashboard', [App\Http\Controllers\Admin\DashboardController::class, 'index'])->name('dashboard');
     Route::resource('application', ApplicationController::class);
+    Route::resource('programs', ProgramsController::class);
 });
 
 
