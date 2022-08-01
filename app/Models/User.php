@@ -65,6 +65,6 @@ class User extends Authenticatable
     //role and user relationship 
     public function roles()
     {
-        $this->belongsTo('App\Role');
+        $this->belongsTo(Role::class);
     }
 }

@@ -30,7 +30,7 @@ class ProgramsController extends Controller
     {
         $input = $request->all();
         Programs::create($input);
-        return redirect()->route('admin.programs.index'); 
+        return redirect()->route('admin.programs.index');
     }
 
     /* Display the specified resource*/
@@ -60,14 +60,13 @@ class ProgramsController extends Controller
     public function destroy($id)
     {
         Programs::destroy($id);
-        return redirect()->route('admin.programs.index');  
+        return redirect()->route('admin.programs.index');
     }
 
     public function search(Request $request)
     {
         $search = $request->get('search');
-        $programs = DB::table('programs')->where('code', 'description', '%'.$search.'%')->paginate(5);
+        $programs = DB::table('programs')->where('code', 'description', '%' . $search . '%')->paginate(5);
         return view('programs.index')->with('programs', $programs);
-
     }
 }
