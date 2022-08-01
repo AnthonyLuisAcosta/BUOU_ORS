@@ -22,6 +22,8 @@ class UsersTableSeeder extends Seeder
             'first_name' => 'Admin',
             'email' => 'admin@gmail.com',
             'password' => Hash::make('pass@admin'),
+            'created_at'  => date("Y-m-d H:i:s"),
+            'updated_at' => date("Y-m-d H:i:s"),
         ]);
 
         DB::table('users')->insert([
@@ -29,6 +31,8 @@ class UsersTableSeeder extends Seeder
             'first_name' => 'Registrar',
             'email' => 'registrar@gmail.com',
             'password' => Hash::make('pass@registrar'),
+            'created_at'  => date("Y-m-d H:i:s"),
+            'updated_at' => date("Y-m-d H:i:s"),
         ]);
 
         DB::table('users')->insert([
@@ -36,6 +40,8 @@ class UsersTableSeeder extends Seeder
             'first_name' => 'Dean',
             'email' => 'dean@gmail.com',
             'password' => Hash::make('pass@dean'),
+            'created_at'  => date("Y-m-d H:i:s"),
+            'updated_at' => date("Y-m-d H:i:s"),
         ]);
 
         DB::table('users')->insert([
@@ -43,6 +49,8 @@ class UsersTableSeeder extends Seeder
             'first_name' => 'Program Adviser',
             'email' => 'adviser@gmail.com',
             'password' => Hash::make('pass@adviser'),
+            'created_at'  => date("Y-m-d H:i:s"),
+            'updated_at' => date("Y-m-d H:i:s"),
         ]);
 
         DB::table('users')->insert([
@@ -50,6 +58,8 @@ class UsersTableSeeder extends Seeder
             'first_name' => 'Applicant',
             'email' => 'applicant@gmail.com',
             'password' => Hash::make('pass@applicant'),
+            'created_at'  => date("Y-m-d H:i:s"),
+            'updated_at' => date("Y-m-d H:i:s"),
         ]);
     }
 }
