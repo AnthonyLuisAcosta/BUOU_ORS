@@ -8,7 +8,8 @@ use Illuminate\Database\Eloquent\Model;
 class Application extends Model
 {
     use HasFactory;
-    protected $fillable = ['lastName', 'firstName', 'middleName', 'birthDate', 'gender','email', 'phone', 'phone', 'company', 'address', 'applicantImage'];
+    protected $primaryKey = 'id';
+    protected $fillable = ['lastName', 'firstName', 'middleName', 'birthDate', 'gender','email', 'phone', 'phone', 'company', 'address'];
     protected $table = 'applications';
 
 }

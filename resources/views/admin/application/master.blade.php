@@ -53,6 +53,9 @@
 
 <!--responsive content CSS>-->
 <style>
+    html{
+        background-color: rgb(235, 235, 235);
+    }
     .content {
         margin-left: 250px;
         padding: 1px 16px;
