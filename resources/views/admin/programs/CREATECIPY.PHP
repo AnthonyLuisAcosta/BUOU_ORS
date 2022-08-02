@@ -8,10 +8,10 @@
     <div>
         <div class="max-w-4xl mx-auto py-10 sm:px-6 lg:px-8">
             <div class="block mb-8">
-                <a href="{{ route('programs.index') }}" class="bg-gray-200 hover:bg-gray-300 text-black font-bold py-2 px-4 rounded">Back to list</a>
+                <a href="{{ route('admin.programs.index') }}" class="bg-gray-200 hover:bg-gray-300 text-black font-bold py-2 px-4 rounded">Back to list</a>
             </div>
             <div class="mt-5 md:mt-0 md:col-span-2">
-                <form action="{{ url('programs') }}" method="post">
+                <form action="{{ route('admin.programs.store') }}" method="post">
                     @csrf
                     <div class="shadow overflow-hidden sm:rounded-md">
                         <div class="px-4 py-5 bg-white sm:p-6">
@@ -21,27 +21,31 @@
                             @error('code')
                                 <p class="text-sm text-red-600">{{ $message }}</p>
                             @enderror
+
                             <label for="description" class="block font-medium text-sm text-gray-700 pt-3">Description</label>
                             <input type="text" name="description" id="description" type="text" class="form-input rounded-md shadow-sm mt-1 block w-full"
                                     value="{{ old('description', '') }}" />
                             @error('description')
                                 <p class="text-sm text-red-600">{{ $message }}</p>
                             @enderror
+
                             <label for="adviser" class="block font-medium text-sm text-gray-700 pt-3">Program Adviser</label>
-                            <input type="text" name="adviser" id="adviser" type="text" class="form-input rounded-md shadow-sm mt-1 block w-full"
-                                    value="{{ old('adviser', '') }}" />
+                            <select type="text" name="adviser" id="adviser" type="text" class="form-input rounded-md shadow-sm mt-1 block w-full"
+                                    value="{{ old('adviser', '') }}" >
                             @error('adviser')
                                 <p class="text-sm text-red-600">{{ $message }}</p>
                             @enderror
+
                             <label for="dean" class="block font-medium text-sm text-gray-700 pt-3">Dean</label>
-                            <input type="text" name="dean" id="dean" type="text" class="form-input rounded-md shadow-sm mt-1 block w-full"
-                                    value="{{ old('dean', '') }}" />
+                            <select type="text" name="dean" id="dean" type="text" class="form-input rounded-md shadow-sm mt-1 block w-full"
+                                    value="{{ old('dean', '') }}" >
                             @error('dean')
                                 <p class="text-sm text-red-600">{{ $message }}</p>
                             @enderror
+
                             <label for="registrar" class="block font-medium text-sm text-gray-700 pt-3">Registrar</label>
-                            <input type="text" name="registrar" id="registrar" type="text" class="form-input rounded-md shadow-sm mt-1 block w-full"
-                                    value="{{ old('registrar', '') }}" />
+                            <select type="text" name="registrar" id="registrar" type="text" class="form-input rounded-md shadow-sm mt-1 block w-full"
+                                    value="{{ old('registrar', '') }}" >
                             @error('registrar')
                                 <p class="text-sm text-red-600">{{ $message }}</p>
                             @enderror

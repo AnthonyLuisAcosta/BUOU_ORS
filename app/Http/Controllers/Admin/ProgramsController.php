@@ -62,12 +62,4 @@ class ProgramsController extends Controller
         Programs::destroy($id);
         return redirect()->route('admin.programs.index');  
     }
-
-    public function search(Request $request)
-    {
-        $search = $request->get('search');
-        $programs = DB::table('programs')->where('code', 'description', '%'.$search.'%')->paginate(5);
-        return view('programs.index')->with('programs', $programs);
-
-    }
 }
