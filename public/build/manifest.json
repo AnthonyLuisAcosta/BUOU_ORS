@@ -5,7 +5,11 @@
     "isEntry": true
   },
   "resources/css\\app.css": {
+<<<<<<< HEAD
+    "file": "assets/app.b0735630.css",
+=======
     "file": "assets/app.4674a64b.css",
+>>>>>>> a0362f06e8a030f22c6c66e2ec78093d0d95d3cc
     "src": "resources/css\\app.css"
   }
 }
