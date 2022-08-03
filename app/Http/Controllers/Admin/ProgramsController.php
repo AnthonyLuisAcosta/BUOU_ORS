@@ -2,12 +2,12 @@
 
 namespace App\Http\Controllers\Admin;
 
-use App\Http\Controllers\Controller;
+use App\Models\User;
 use App\Models\Programs;
 use Illuminate\Http\Request;
+use App\Http\Controllers\Controller;
 use App\Http\Requests\StoreProgramsRequest;
 use Symfony\Component\HttpFoundation\Response;
-use DB;
 
 class ProgramsController extends Controller
 {
@@ -22,7 +22,8 @@ class ProgramsController extends Controller
     /*Show the form for creating a new resource */
     public function create()
     {
-        return view('admin.programs.create');
+        $users = User::all();
+        return view('admin.programs.create', compact('users'));
     }
 
     /* Store a newly created resource in storage*/
@@ -30,21 +31,23 @@ class ProgramsController extends Controller
     {
         $input = $request->all();
         Programs::create($input);
-        return redirect()->route('admin.programs.index'); 
+        return redirect()->route('admin.programs.index');
     }
 
     /* Display the specified resource*/
     public function show($id)
     {
         $programs = Programs::find($id);
-        return view('admin.programs.show')->with('programs', $programs);
+        $users = User::all();
+        return view('admin.programs.show')->with('programs', $programs)->with('users', $users);
     }
 
     /*Show the form for editing the specified resource.*/
     public function edit($id)
     {
         $programs = Programs::find($id);
-        return view('admin.programs.edit')->with('programs', $programs);
+        $users = User::all();
+        return view('admin.programs.edit')->with('programs', $programs)->with('users', $users);
     }
 
     /* Update the specified resource in storage*/
@@ -62,4 +65,5 @@ class ProgramsController extends Controller
         Programs::destroy($id);
         return redirect()->route('admin.programs.index');  
     }
+
 }

@@ -24,10 +24,53 @@
                             @error('code')
                                 <p class="text-sm text-red-600">{{ $message }}</p>
                             @enderror
+
                             <label for="description" class="block font-medium text-sm text-gray-700m pt-3">Description</label>
                             <input type="text" name="description" id="description" type="text" class="form-input rounded-md shadow-sm mt-1 block w-full"
                                    value="{{ old('description', $programs->description) }}" />
                             @error('description')
+                                <p class="text-sm text-red-600">{{ $message }}</p>
+                            @enderror
+
+                            <label for="adviser" class="block font-medium text-sm text-gray-700 pt-3">Program Adviser</label>
+                            <select name="adviser" id="adviser" class="form-input rounded-md shadow-sm mt-1 block w-full">
+                                @foreach ($users as $user)
+                                    @if ($user->role_id == '5')
+                                        <option value="{{ $user->id }}">
+                                            {{ $user->first_name.' '.$user->last_name }}
+                                        </option>
+                                    @endif
+                                @endforeach
+                            </select>
+                            @error('adviser')
+                                <p class="text-sm text-red-600">{{ $message }}</p>
+                            @enderror
+
+                            <label for="dean" class="block font-medium text-sm text-gray-700 pt-3">Dean</label>
+                            <select name="dean" id="dean" class="form-input rounded-md shadow-sm mt-1 block w-full">
+                                @foreach ($users as $user)
+                                    @if ($user->role_id == '3')
+                                        <option value="{{ $user->id }}">
+                                            {{ $user->first_name.' '.$user->last_name }}
+                                        </option>
+                                    @endif
+                                @endforeach
+                            </select>
+                            @error('dean')
+                                <p class="text-sm text-red-600">{{ $message }}</p>
+                            @enderror
+
+                            <label for="registrar" class="block font-medium text-sm text-gray-700 pt-3">Registrar</label>
+                            <select name="registrar" id="registrar" class="form-input rounded-md shadow-sm mt-1 block w-full">
+                                @foreach ($users as $user)
+                                    @if ($user->role_id == '2')
+                                        <option value="{{ $user->id }}">
+                                            {{ $user->first_name.' '.$user->last_name }}
+                                        </option>
+                                    @endif
+                                @endforeach
+                            </select>
+                            @error('registrar')
                                 <p class="text-sm text-red-600">{{ $message }}</p>
                             @enderror
                         </div>
