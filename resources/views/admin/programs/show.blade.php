@@ -31,6 +31,42 @@
                                         {{ $programs->description }}
                                     </td>
                                 </tr>
+                                <tr class="border-b">
+                                    <th scope="col" class="px-6 py-3 bg-gray-50 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">
+                                        Program Adviser
+                                    </th>
+                                    <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-900 bg-white divide-y divide-gray-200">
+                                        @foreach($users as $user)
+                                            @if ($programs->adviser == $user->id)                       
+                                                    {{ $user->first_name.' '.$user->last_name }}                  
+                                            @endif
+                                        @endforeach
+                                    </td>
+                                </tr>
+                                <tr class="border-b">
+                                    <th scope="col" class="px-6 py-3 bg-gray-50 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">
+                                        Dean
+                                    </th>
+                                    <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-900 bg-white divide-y divide-gray-200">
+                                        @foreach($users as $user)
+                                            @if ($programs->dean == $user->id)                       
+                                                    {{ $user->first_name.' '.$user->last_name }}                  
+                                            @endif
+                                        @endforeach
+                                    </td>
+                                </tr>
+                                <tr class="border-b">
+                                    <th scope="col" class="px-6 py-3 bg-gray-50 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">
+                                        Registrar
+                                    </th>
+                                    <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-900 bg-white divide-y divide-gray-200">
+                                        @foreach($users as $user)
+                                            @if ($programs->registrar == $user->id)                       
+                                                    {{ $user->first_name.' '.$user->last_name }}                  
+                                            @endif
+                                        @endforeach
+                                    </td>
+                                </tr>
                             </table>
                         </div>
                     </div>

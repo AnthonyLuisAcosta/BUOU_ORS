@@ -26,6 +26,15 @@ class StoreProgramsRequest extends FormRequest
             'description' => [
                 'required', 'string',
             ],
+            'adviser' => [
+                'required', 'string',
+            ],
+            'dean' => [
+                'required', 'string',
+            ],
+            'registrar' => [
+                'required', 'string',
+            ],
         ];
     }
 }

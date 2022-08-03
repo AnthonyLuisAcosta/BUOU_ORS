@@ -24,11 +24,11 @@
 				<table id="example" class="stripe hover" style="width:100%; padding-top: 1em;  padding-bottom: 1em;">
 					<thead>
 						<tr>
-							<th data-priority="1">CODE</th>
-							<th data-priority="2">DESCRIPTION</th>
-							<th data-priority="3">CREATED AT</th>
-							<th data-priority="4">UPDATED AT</th>
-							<th data-priority="5">ACTION</th>
+							<th data-priority="1">Code</th>
+							<th data-priority="2">Description</th>
+							<th data-priority="3">Created at</th>
+							<th data-priority="4">Updated at</th>
+							<th data-priority="5">Action</th>
 						</tr>
 					</thead>
 					<tbody>
